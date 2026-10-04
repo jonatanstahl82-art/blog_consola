@@ -79,20 +79,14 @@
         "titulo": "Introducción a Python y Orientación a Objetos",
         "contenido": "En este artículo exploramos cómo las clases y objetos facilitan la estructura del código.",
         "autor": {
-            "nombre": "Ricardo Gutierrez.",
-            "bio": "Analista de datos y creador de contenido sobre programación.",
-            "bspecialidad": "Python, Django y PowerBi",
-            "redes_sociales": [
-                "@richard_data",
-                "@richard_python",
-                "@richard_aps"
-            ]
+            "nombre": "Laura Gómez",
+            "email": "Desarrolladora de software y divulgadora tecnológica especializada en el ecosistema Python y la arquitectura de sistemas"
         },
         "categoria": "Programación",
         "tags": [
-            "Python",
-            "OOP",
-            "Tutorial"
+            "Python\"",
+            "\"OOP\"",
+            "\"Tutorial"
         ],
         "estado": "Publicado"
     }

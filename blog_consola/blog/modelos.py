@@ -19,3 +19,16 @@ class Post:
             "tags": self.tags,
             "estado": self.estado
         }
+
+class autor:
+    def __init__(self, nombre, bio):
+        self.nombre = nombre
+        self.bio = bio
+
+    def to_dict(self):
+        """Pasa el objeto a diccionario para poder guardarlo en JSON."""
+        return {
+            "nombre": self.nombre,
+            "email": self.bio
+        }
+    

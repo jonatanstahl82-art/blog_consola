@@ -1,5 +1,5 @@
 from .datos import posts as posts_iniciales, perfil_autor
-from .modelos import Post
+from .modelos import Post, autor
 from .operaciones import (
     listar_posts, 
     buscar_por_titulo, 
@@ -43,11 +43,13 @@ def crear_nuevo_post(lista_posts):
     tags_str = input("Tags (separados por coma): ")
     tags = [t.strip() for t in tags_str.split(",") if t.strip()]
 
+    
+    autor_data = pedir_datos_autor()
     post_obj = Post(
         id=nuevo_id,
         titulo=titulo,
         contenido=contenido,
-        autor=perfil_autor,
+        autor=autor_data,
         categoria=categoria,
         tags=tags,
         estado="Publicado"
@@ -56,6 +58,18 @@ def crear_nuevo_post(lista_posts):
     lista_posts.append(post_obj)
     guardar_posts(lista_posts)
     print(f"¡Post '{titulo}' creado y guardado con éxito (ID: {nuevo_id})!")
+
+def pedir_datos_autor():
+    print("\n--- DATOS DEL AUTOR ---")
+    nombre = input("Nombre del autor: ").strip()
+    bio = input("Biografía: ").strip()
+
+    nuevo_autor = autor(
+        nombre=nombre,
+        bio=bio,
+    )
+    return nuevo_autor.to_dict()
+
 
 
 def mostrar_menu():
